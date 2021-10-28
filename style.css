@@ -1,0 +1,187 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;1,200;1,600&display=swap');
+     :root {
+        --main-color: #2980b9;
+        --black: #444;
+        --bg: #fff;
+        --light-bg: #eee;
+        --lihtg-color: #666;
+        --border: 1px solid rgba(0, 0, 0, .1);
+        --box-shadow: 0, 5px, 10px rgba(0, 0, 0, .1);
+    }
+    
+    * {
+        font-family: 'Poppins', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+    
+    body {
+        background-color: var(--light-bg);
+        overflow: hidden;
+    }
+    
+    body.active {
+        --black: #fff;
+        --bg: #262626;
+        --light-bg: #333;
+        --light-color: #eee;
+        --border: 1px solid rgba(255, 255, 255, .1);
+        --box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    }
+    
+    #theme-open {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        color: var(--black);
+        cursor: pointer;
+        font-size: 40px;
+        z-index: 10;
+    }
+    
+    .theme-counteaner {
+        text-align: right;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        padding: 20px;
+        width: 350px;
+        background-color: var(--bg);
+        border-left: var(--border);
+        height: 100vh;
+        z-index: 1000;
+    }
+    
+    .theme-counteaner.active {
+        right: 0;
+    }
+    
+    .theme-counteaner #icone {
+        font-size: 40px;
+        color: var(--black);
+        cursor: pointer;
+    }
+    
+    .theme-counteaner h3 {
+        text-align: center;
+        color: var(--black);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding: 15px 0;
+        margin: 20px 0;
+    }
+    
+    .theme-counteaner .theme-toggole {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .theme-counteaner .theme-toggole span {
+        color: var(--lihtg-color);
+    }
+    
+    .theme-counteaner .theme-toggole .toggle {
+        height: 40px;
+        width: 100px;
+        border-radius: 40%;
+        position: relative;
+        background-color: var(--lihtg-color);
+        cursor: pointer;
+        border: var(--border);
+        margin: 0 10px;
+    }
+    
+    .theme-counteaner .theme-toggole .toggle::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background: #fff;
+        transition: .2s linear;
+    }
+    
+    .theme-counteaner .theme-toggole.active .toggle::before {
+        left: 65px;
+    }
+    
+    .theme-counteaner .theme-colors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 30px;
+        gap: 12px;
+    }
+    
+    .theme-counteaner .theme-colors .color {
+        border-radius: 5px;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        margin: 3px
+    }
+    
+    .theme-counteaner .theme-colors .color:hover {
+        opacity: .5;
+    }
+    
+    .contaner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+        margin: 10px;
+        min-height: 100vh;
+    }
+    
+    .contaner .content {
+        background: var(--bg);
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+        text-align: center;
+        width: 400px;
+    }
+    
+    .contaner .content img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .contaner .content h3 {
+        color: var(--black);
+        font-size: 25px;
+    }
+    
+    .contaner .content p {
+        color: var(--lihtg-color);
+        font-size: 15px;
+        line-height: 2;
+        padding: 10px 0;
+    }
+    
+    .contaner .content .btn {
+        margin-top: 10px;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px 30px;
+        color: #fff;
+        background-color: var(--main-color);
+        font-size: 17px;
+    }
+    
+    .contaner .content .btn:hover {
+        opacity: .8;
+        letter-spacing: 1px;
+    }
